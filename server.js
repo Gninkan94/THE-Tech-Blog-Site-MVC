@@ -2,7 +2,7 @@
 const express = require("express");
 const session = require("express-session");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
-const routes = require("./controllers");
+//const routes = require("./controllers");
 const sequelize = require("./config/connection");
 const exphbs = require("express-handlebars");
 const hbs = exphbs.create({ helpers: require("./utils/helpers") });
@@ -34,14 +34,14 @@ app.set("view engine", "handlebars");
 // Using session middleware again with a different session object
 app.use(
   session({
-    secret: process.env.SECRET,
+    secret: process.env,
     store: new SequelizeStore({ db: sequelize }),
     resave: false,
     saveUninitialized: false,
   })
 );
 // Using routes from controller
-app.use(routes);
+//app.use(routes);
 // Syncing sequelize models with database and starting server
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Listening on PORT ${PORT}`));
