@@ -1,7 +1,7 @@
 // Import the all  models
 const User = require("./User");
 const Post = require("./Post");
-const Comment = require("./comment");
+const comment = require("./comment");
 
 // lets define the relationships between  models
 
@@ -15,24 +15,24 @@ Post.belongsTo(User, {
     foreignKey: "user_id", 
 });
 
-Comment.belongsTo(User, {
+comment.belongsTo(User, {
   
     foreignKey: "user_id", 
 });
 
-Comment.belongsTo(Post, {
+comment.belongsTo(Post, {
  
     foreignKey: "post_id", 
 });
 
-Post.hasMany(Comment, {
+Post.hasMany(comment, {
   foreignKey: "post_id", 
 });
 
-User.hasMany(Comment, {
+User.hasMany(comment, {
   foreignKey: "user_id",
 });
 
 // Export the models
 
-module.exports = { User, Post, Comment };
+module.exports = { User, Post, comment };
