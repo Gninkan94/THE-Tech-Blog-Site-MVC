@@ -1,6 +1,6 @@
 
 const router = require("express").Router();
-const { Post, User, Comment } = require("../../models");
+const { Post, User, comment } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // this will Get all posts 
@@ -23,7 +23,7 @@ router.get("/:id", async (req, res) => {
       include: [
         { model: User, attributes: ["username"] },
         {
-          model: Comment,
+          model: comment,
           include: [{ model: User, attributes: ["username"] }],
         },
       ],
@@ -74,7 +74,7 @@ router.delete("/:id", withAuth, async (req, res) => {
   try {
     
     // this will delete all comments associated to the post
-    await Comment.destroy({
+    await comment.destroy({
       where: { post_id: req.params.id },
     });
 

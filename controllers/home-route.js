@@ -1,6 +1,6 @@
 // Import all packages and models
 const router = require("express").Router();
-const { Post, User, Comment } = require("../models");
+const { Post, User, comment } = require("../models");
 const withAuth = require("../utils/auth");
 
 // this route to render homepage
@@ -42,7 +42,7 @@ router.get("/post/:id", withAuth, async (req, res) => {
       include: [
         { model: User, attributes: ["username"] },
         {
-          model: Comment,
+          model: comment,
           include: [{ model: User, attributes: ["username"] }],
         },
       ],
@@ -132,7 +132,7 @@ router.get("/editpost/:id", async (req, res) => {
       include: [
         { model: User, attributes: ["username"] },
         {
-          model: Comment,
+          model: comment,
           include: [{ model: User, attributes: ["username"] }],
         },
       ],
