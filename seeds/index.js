@@ -3,19 +3,23 @@ const seedUsers = require("./userData");
 const seedPosts = require("./postData");
 const seedComments = require("./commentData");
 
-// Importing the sequelize connection from ../config/connection
+// this will Import  sequelize connection from ../config/connection
 const sequelize = require("../config/connection");
 
-// Function to seed all data by calling the three seed functions in sequence
+
+// This Function to seed all data by calling the three seed functions in sequence
 const seedAll = async () => {
-    // Syncing the sequelize models and wiping out the tables
+    
+  // this synchronize the sequelize models and wiping out the tables
   await sequelize.sync({ force: true });
-  // Calling each of the seed data functions
+  
+  // thi call all fuction for seeds
   await seedUsers();
   await seedPosts();
   await seedComments();
-  // Exiting the process with a successful exit code
+ 
   process.exit(0);
 };
+
 // Calling the seedAll function to seed the database
 seedAll();

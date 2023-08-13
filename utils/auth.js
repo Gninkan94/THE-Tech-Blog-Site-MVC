@@ -1,4 +1,6 @@
-// Middleware function to check if user is logged in
+
+// this Middleware function is  to check if user is logged in
+
 const withAuth = (req, res, next) => {
     if (!req.session.logged_in) {
       res.redirect("/login");
@@ -8,4 +10,5 @@ const withAuth = (req, res, next) => {
   };
   
   // Exporting withAuth middleware function
+  
   module.exports = withAuth;
