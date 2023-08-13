@@ -20,7 +20,8 @@ const sess = {
   }),
 };
 
-// Using session middleware with session object
+// Using session middleware with  the session object
+
 app.use(session(sess));
 // Parsing incoming JSON and URL-encoded data
 
