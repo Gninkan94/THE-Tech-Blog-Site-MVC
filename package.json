@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
+    "cjs": "^0.0.11",
     "connect-session-sequelize": "^7.1.7",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
@@ -20,6 +21,5 @@
     "inquirer": "^9.2.10",
     "mysql2": "^3.6.0",
     "sequelize": "^6.32.1"
-  },
-  "devDependencies": {}
+  }
 }
