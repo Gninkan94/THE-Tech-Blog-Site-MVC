@@ -30,7 +30,7 @@ const techLoginFormHandler = async (event) => {
   
   
   // Event listener for the tech login form
-  const chessLoginForm = document.querySelector('.tech-login-form');
-  if (chessLoginForm) {
-    chessLoginForm.addEventListener('submit', chessLoginFormHandler);
+  const loginForm = document.querySelector('.tech-login-form');
+  if (loginForm) {
+    loginForm.addEventListener('submit', chessLoginFormHandler);
   }

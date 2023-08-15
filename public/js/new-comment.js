@@ -27,7 +27,7 @@ const newTechCommentFormHandler = async (event) => {
   
   // Event listeners
   
-  const newChessCommentForm = document.querySelector('.new-comment-form');
-  if (newChessCommentForm) {
-    newChessCommentForm.addEventListener('submit', newTechCommentFormHandler);
+  const newBlogCommentForm = document.querySelector('.new-comment-form');
+  if (newBlogCommentForm) {
+    newBlogCommentForm.addEventListener('submit', newTechCommentFormHandler);
   }

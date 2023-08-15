@@ -24,7 +24,7 @@ const thetechSignupFormHandler = async (event) => {
   
   
   // Event listeners
-  const chessSignupForm = document.querySelector('#signup-form');
-  if (chessSignupForm) {
-    chessSignupForm.addEventListener('submit', thetechSignupFormHandler);
+  const blogSignupForm = document.querySelector('#signup-form');
+  if (blogSignupForm) {
+    blogSignupForm.addEventListener('submit', thetechSignupFormHandler);
   }

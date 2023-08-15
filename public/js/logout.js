@@ -13,7 +13,7 @@ const techLogout = async () => {
   };
   
   // Event listener to the logout button
-  const chessLogoutButton = document.querySelector('#the-tech-logout');
-  if (chessLogoutButton) {
-    chessLogoutButton.addEventListener('click', techLogout);
+  const techLogoutButton = document.querySelector('#the-tech-logout');
+  if (techLogoutButton) {
+    techLogoutButton.addEventListener('click', techLogout);
   }

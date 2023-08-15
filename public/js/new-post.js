@@ -23,7 +23,7 @@ const newTechPostFormHandler = async (event) => {
   
   
   // The Event listeners
-  const newChessPostForm = document.querySelector('.new-post-form');
-  if (newChessPostForm) {
-    newChessPostForm.addEventListener('submit', newTechPostFormHandler);
+  const newBlogPostForm = document.querySelector('.new-post-form');
+  if (newBlogPostForm) {
+    newBlogPostForm.addEventListener('submit', newTechPostFormHandler);
   }
